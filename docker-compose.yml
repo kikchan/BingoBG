@@ -6,9 +6,4 @@ services:
     image: bingobg:latest
     ports:
       - "2005:80"
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "wget", "--spider", "-S", "http://localhost:80"]
-      interval: 30s
-      timeout: 5s
-      retries: 3
+    restart: always

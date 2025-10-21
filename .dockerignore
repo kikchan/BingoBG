@@ -1,7 +1,7 @@
 node_modules
 .git
 .cache
-dist
+build
 npm-debug.log
 Dockerfile
 *.local

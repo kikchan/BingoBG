@@ -14,9 +14,9 @@ A fancy React + Vite Bingo web app that draws random numbers (1–90) and reads 
 1. Install dependencies
 2. Start the dev server
 
-## Build
+# Build
 
-Creates a production build.
+Creates a production build (output goes to `build/`).
 
 ## Docker
 
@@ -31,7 +31,7 @@ docker run --rm -p 5173:80 bingobg:latest
 ```
 
 Notes:
-- The Dockerfile uses a multi-stage build: Node (build) → Nginx (runtime). The image serves the static `dist` output.
+- The Dockerfile uses a multi-stage build: Node (build) → Nginx (runtime). The image serves the static `build` output.
 - If you want to expose a different port on your host, change the `-p` mapping.
 
 ## Notes
