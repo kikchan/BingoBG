@@ -204,7 +204,7 @@ export default function App() {
       </header>
       <main className="main">
         <section className="current card">
-          {!(index < 0 && countdown === null) && <div className="label">Текущо число</div>}
+          <div className="label">Текущо число</div>
           {playing && index < 0 && countdown !== null ? (
             <div className="big">{countdown}</div>
           ) : (

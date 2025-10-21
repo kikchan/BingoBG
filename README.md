@@ -27,12 +27,18 @@ Build and run the production image (from project root):
 docker build -t bingobg:latest .
 
 # run (serves app on port 80 inside container)
-docker run --rm -p 5173:80 bingobg:latest
+docker run --rm -p 2005:80 bingobg:latest
+
+# or using docker compose (recommended)
+docker compose up --build
 ```
 
 Notes:
 - The Dockerfile uses a multi-stage build: Node (build) → Nginx (runtime). The image serves the static `build` output.
-- If you want to expose a different port on your host, change the `-p` mapping.
+- If you want to expose a different port on your host, change the `-p` mapping or the compose `ports` section.
+
+Troubleshooting:
+- If Docker Desktop networking appears to hang or name resolution fails when this container starts, try: `docker compose down -v` and restart Docker Desktop. Then run `docker compose up` again. If you're on a corporate VPN, set explicit DNS servers in a compose override (see `docker-compose.override.yml`).
 
 ## Notes
 
