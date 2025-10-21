@@ -1,9 +1,8 @@
 services:
-  bingobg:
+  app:
     build:
       context: .
       dockerfile: Dockerfile
-    image: bingobg:latest
     ports:
       - "2005:80"
     restart: always

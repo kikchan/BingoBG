@@ -1,8 +1,0 @@
-services:
-  bingobg:
-    # Disable automatic restarts while diagnosing DNS issues
-    restart: "no"
-    # Set explicit DNS servers to isolate from host/VPN DNS problems
-    dns:
-      - 192.168.1.20
-      - 192.168.1.1
